@@ -1,14 +1,21 @@
-cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
 
 project(driver VERSION 0.1.0 LANGUAGES C)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
-
 # Module info
 add_definitions(-D__KERNEL__ -DMODULE)
 
-set (KERNEL_HEADERS_DIR linux-headers-5.10.0-18-common)
+# Find uname -r
+execute_process(
+        COMMAND uname -r
+        OUTPUT_VARIABLE KERNEL_UNAMER_RELEASE_NAME
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+set(KERNEL_UNAMER_RELEASE_NAME "5.11.0-22-generic")
+set(KERNEL_UNAMER_RELEASE_NAME "5.15.0-58-generic")
+
 # Find the kernel release
 execute_process(
         COMMAND echo ${KERNEL_HEADERS_DIR}
