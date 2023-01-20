@@ -1,0 +1,3 @@
+/home/timr/cmake-kernel-module/build/CMakeFiles/rebuild_cache.dir
+/home/timr/cmake-kernel-module/build/CMakeFiles/edit_cache.dir
+/home/timr/cmake-kernel-module/build/CMakeFiles/driver.dir
