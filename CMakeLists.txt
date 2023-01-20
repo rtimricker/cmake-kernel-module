@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
+cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
 project(driver VERSION 0.1.0 LANGUAGES C)
 set(CMAKE_C_STANDARD 11)
