@@ -8,9 +8,10 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 # Module info
 add_definitions(-D__KERNEL__ -DMODULE)
 
+set (KERNEL_HEADERS_DIR linux-headers-5.10.0-18-common)
 # Find the kernel release
 execute_process(
-        COMMAND uname -r
+        COMMAND echo ${KERNEL_HEADERS_DIR}
         OUTPUT_VARIABLE KERNEL_RELEASE
         OUTPUT_STRIP_TRAILING_WHITESPACE
 )
