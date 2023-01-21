@@ -13,6 +13,7 @@ execute_process(
         OUTPUT_VARIABLE KERNEL_UNAMER_RELEASE_NAME
         OUTPUT_STRIP_TRAILING_WHITESPACE
 )
+
 set(KERNEL_UNAMER_RELEASE_NAME "5.11.0-22-generic")
 set(KERNEL_UNAMER_RELEASE_NAME "5.15.0-58-generic")
 
@@ -51,4 +52,3 @@ add_custom_command(OUTPUT ${DRIVER_FILE}
         DEPENDS hello.c VERBATIM)
 #
 add_custom_target(driver ALL DEPENDS ${DRIVER_FILE})
-
